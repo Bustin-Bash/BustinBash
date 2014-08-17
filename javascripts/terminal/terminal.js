@@ -11,6 +11,7 @@ Terminal.View.prototype = {
     var text    = template(context);
     $('.feed').append(text)
     $('input').val("");
+
   },
   renderError: function(value, input){
     var source   = $("#terminal-error-template").html();
@@ -48,6 +49,7 @@ Terminal.Controller.prototype = {
     if(input === this.data.Answer){
       $(document).trigger('success');
       this.view.renderSuccess(this.data.Success, input)
+
     } else {
       this.view.renderError(this.data.Error, input)
     }
