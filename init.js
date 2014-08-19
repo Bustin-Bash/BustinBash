@@ -9,6 +9,12 @@ $(document).ready(function(){
   var mc = new BustinBash.Master.Controller
   mc.init();
   // mc.bindEvents()
+
+  // Lessons
+  var lv = new BustinBash.Lessons.View
+  var lc = new BustinBash.Lessons.Controller(lv)
+  lc.init();
+
   // Instruction
   var iv = new BustinBash.Instruction.View
   var ic = new BustinBash.Instruction.Controller(iv)

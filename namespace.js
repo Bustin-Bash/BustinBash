@@ -6,7 +6,8 @@ var BustinBash = {
   Hints: {},
   Database: {},
   Master: {},
-  Title: {}
+  Title: {},
+  Lessons: {}
 }
 
 

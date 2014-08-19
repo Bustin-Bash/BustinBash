@@ -33,4 +33,4 @@ var tour = {
 };
 
 // Start the tour!
-hopscotch.startTour(tour);
+// hopscotch.startTour(tour);
