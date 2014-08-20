@@ -2,6 +2,8 @@
 BustinBash.Title.View = function() {}
 BustinBash.Title.View.prototype = {
   render: function(title) {
+    debugger
+
     var source   = $('#title-template').html();
     var template = Handlebars.compile(source);
     var context = {title: title}

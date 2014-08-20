@@ -1,5 +1,4 @@
-// Model
-BustinBash.Hints.Model = function() {}
+
 
 // View
 BustinBash.Hints.View = function() {}
