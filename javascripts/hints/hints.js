@@ -1,6 +1,3 @@
-// Model
-BustinBash.Hints.Model = function() {}
-
 // View
 BustinBash.Hints.View = function() {}
 
@@ -11,6 +8,10 @@ BustinBash.Hints.View.prototype = {
     var context = {hint: hint}
     var text    = template(context);
     $('.hints').html(text)
+  },
+
+  hideHint: function(){
+    $('#hint').hide()
   }
 }
 
@@ -33,5 +34,6 @@ BustinBash.Hints.Controller.prototype = {
   },
   displayHint: function(hint) {
     this.view.render(hint)
+    this.view.hideHint()
   }
 }
