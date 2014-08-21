@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Bustin' Bash</title>
+  <title>Bustin'Bash</title>
 
   <!-- Stylesheets -->
   <link rel="stylesheet" src="http://normalize-css.googlecode.com/svn/trunk/normalize.css" />
@@ -14,7 +14,7 @@
   <script type="text/javascript" src="javascripts/vendor/handlebars.js"></script>
   <script type="text/javascript" src="javascripts/vendor/hopscotch.min.js"></script>
   <script type="text/javascript" src="namespace.js"></script>
-  <script type="text/javascript" src="init.js"></script>
+  <script type="text/javascript" src="app.js"></script>
   <script type="text/javascript" src="javascripts/database/database.js"></script>
   <script type="text/javascript" src="javascripts/master/master.js"></script>
   <script type="text/javascript" src="javascripts/question/question.js"></script>
@@ -35,8 +35,8 @@
       <div class="navbar column two-thirds" id ="navbar_popup">
       </div>
       <div class="logo column third">
-        <h1 class="logo-text">Bustin Bash</h1>
         <img class="logo" src="images/terminal.png">
+        <h1 class="logo-text">BustinBash</h1>
       </div>
     </div>
     <hr>
@@ -52,8 +52,6 @@
       </div>
     </div>
 
-
-
     <!-- Terminal/ Hints/ Questions -->
     <div class="row clearfix">
       <div class="column two-thirds wrapper">
@@ -66,9 +64,7 @@
         </div>
 
         <div class="terminal">
-
           <div class='feed'></div>
-
           <div class='input' id="terminal_popup">
             :> <input id="terminal-input">
           </div>
@@ -290,12 +286,19 @@
     </div>
     <hr>
     <!-- Footer -->
-    <div class="column full row clearfix">
-      <div class="footer">footer</div>
+    <div class="footer column full row clearfix">
+        <center>
+          <span>Code licensed under</span> <a href="https://github.com/BustinBash/BustinBash/blob/master/LICENSE" target="_blank">MIT</a><br>
+          <span>Designed and built with all the love in the world by</span>
+          <a href="">@Arik</a>,
+          <a href=""> @Brian</a>,
+          <a href=""> @Puru</a> and
+          <a href=""> @Andra</a><br>
+          <a  class="footer-text" href="http://github.com/BustinBash/BustinBash" target="_blank"><img src="images/icons/github.png"></a>
+          
+        </center>
     </div>
-  </div>
-
-
+  <!-- </div> -->
 
   <!-- Handlebars Templates -->
 

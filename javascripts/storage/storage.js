@@ -13,7 +13,6 @@ BustinBash.Storage.Controller = function(model){
 
 BustinBash.Storage.Controller.prototype = {
 	init: function(){
-		console.log('initialized')
 		this.initStorage();
 		this.bindListeners();
 	},

@@ -1,7 +1,7 @@
 BustinBash.Database.Model = function(controller) {
   this.fetch = function(){
     $.ajax({
-      url: 'http://127.0.0.1:9393/',
+      url: 'http://bustinbash-api.herokuapp.com/',
       type: 'GET',
     }).done(function(data){
       controller.run(data)

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+  console.log('Welcome to our Bash Tutorial!')
   var lsm = new BustinBash.Storage.Model
   var lsc = new BustinBash.Storage.Controller(lsm)
   lsc.init();
