@@ -4,33 +4,38 @@ var tour = {
   steps: [
     {
       title: "Pick Your Level",
-      content: "This is the header of my page.",
+      content: "These are the different lessons you can choose from. Every time you complete a lesson, it will turn green",
       target: "navbar_popup",
       placement: "bottom"
     },
     {
-      title: "This is your question.",
-      content: "Here is where I put my content.",
-      target: "question_popup",
-      // target: document.querySelector("#content p"),
-      placement: "right"
-    },
-    {
-      title: "This is your terminal.",
-      content: "Here is where I put my content.",
-      target: "terminal_popup",
-      // target: document.querySelector("#content p"),
+      title: "Information",
+      content: "Here is information about each topic you will be learning",
+      target: "instruction-template",
       placement: "bottom"
     },
     {
-      title: "This is your directory.",
-      content: "Here is where I put my content.",
-      target: "directory_popup",
-      // target: document.querySelector("#content p"),
+      title: "Task",
+      content: "Complete each task specified here",
+      target: "popup_task",
+      placement: "bottom"
+    },
+    {
+      title: "Terminal",
+      content: "Type your responses here and press enter to move on to the next level",
+      target: "terminal_popup",
+      placement: "top"
+    },
+    {
+      title: "Finder",
+      content: "This is your finder that will update when you type commands in the terminal.",
+      target: "popup-folder",
       placement: "bottom" //maybe change
     }
   ]
 };
 
 // Start the tour!
-// hopscotch.startTour(tour);
+if (localStorage.lessons == ""){
+    hopscotch.startTour(tour);
+}

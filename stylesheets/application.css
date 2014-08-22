@@ -6,6 +6,11 @@ body{
 
 a{
   text-decoration: none;
+  color: #1abc9c;
+}
+
+a:hover{
+  color: #6C7A89;
 }
 
 .header{
@@ -21,18 +26,6 @@ a{
 }
 .title {
   margin-left: 30px;
-}
-
-button{
-  background-color: #7f8c8d;
-  color: white;
-  width: 200px;
-  height: 50px;
-  border-radius: 5px;
-  border-color: #fff;
-  box-shadow: 2px 2px #34495e;
-  font-size: 18px;
-  display:inline-block;
 }
 
 #foggy {
@@ -52,12 +45,24 @@ button{
   margin-left: 30px;
   display:inline-block;
 }
+
 #hint {
-  width: 100px;
-  margin-top: 30px;
-  margin-left: 160px;
-  display:inline-block;
+  margin-top:10px;
+  position:absolute;
+  border-radius:50%;
+  width:80px;
+  height:80px;
+  border:solid 1px #64B6B1;
+  background: #3A3A3C;
+  color:white;
+  font-size: 17px;
 }
+#hint:hover {
+  background:#64B6B1;
+  color:white;
+  cursor:pointer;
+}
+
 .question {
   display:inline-block;
 }
@@ -86,7 +91,6 @@ button{
   margin: 0 auto;
   width: 1280px;
 }
-
 
 div.navbar{
   margin: 0 auto;
