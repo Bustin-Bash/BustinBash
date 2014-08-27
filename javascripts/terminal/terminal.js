@@ -1,3 +1,5 @@
+//------ View --------
+
 BustinBash.Terminal.View =function() {}
 
 BustinBash.Terminal.View.prototype = {
@@ -8,32 +10,39 @@ BustinBash.Terminal.View.prototype = {
   renderSuccess: function(value, input) {
     var source   = $("#terminal-success-template").html();
     var template = Handlebars.compile(source);
-    var context  = {success: value, input: input}
+    var context  = {success: value, input: input};
     var text     = template(context);
     this.updateDOM(text);
+    this.resetDOM();
   },
 
   renderError: function(value, input) {
     var source   = $("#terminal-error-template").html();
     var template = Handlebars.compile(source);
-    var context  = {error: value, input: input}
+    var context  = {error: value, input: input};
     var text     = template(context);
     this.updateDOM(text);
+    this.resetDOM();
   },
 
   renderLS: function(branches){
     branches.forEach(function(branch){
-      $('.feed').append("<div>" + branch + "</div>")
+      this.updateDOM("<div>" + branch + "</div>")
     });
-    $('input').val("");
-    $('.feed').scrollTop($('.feed')[0].scrollHeight);
+    this.resetDOM();
   },
+
   updateDOM: function(text) {
     $('.feed').append(text)
+  },
+
+  resetDOM: function() {
     $('input').val("");
     $('.feed').scrollTop($('.feed')[0].scrollHeight);
- }
+  }
 }
+
+//----- Controller ------
 
 BustinBash.Terminal.Controller = function(view) {
   this.view = view;
@@ -66,7 +75,7 @@ BustinBash.Terminal.Controller.prototype = {
       this.view.renderSuccess(this.data.Success)
     } else if(input === 'ls') {
       this.view.renderLS(this.data.Branches)
-    } 
+    }
     else {
       this.view.renderError(this.data.Error, input)
     }
